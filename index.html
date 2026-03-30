@@ -707,13 +707,32 @@
       margin-bottom: var(--space-8);
     }
 
-    .newsletter-form-placeholder {
-      padding: var(--space-8);
-      border: 1px dashed rgba(91, 143, 168, 0.35);
+    .newsletter-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-3);
+      padding: var(--space-4) var(--space-8);
+      background: var(--color-accent);
+      color: #fff;
+      font-size: var(--text-base);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      border: none;
       border-radius: var(--radius-md);
-      text-align: center;
-      color: #8a919e;
-      font-size: var(--text-sm);
+      text-decoration: none;
+      transition: background var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+      cursor: pointer;
+    }
+    .newsletter-cta:hover {
+      background: var(--color-accent-hover);
+      color: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 24px rgba(91, 143, 168, 0.35);
+    }
+    .newsletter-cta svg {
+      width: 18px;
+      height: 18px;
+      flex-shrink: 0;
     }
 
     /* ===== FOOTER ===== */
@@ -981,12 +1000,10 @@
             Updates on <em style="font-family: var(--font-display); font-style: italic; color: #e8e4dc;">The Arden Vale Files</em>, behind-the-scenes notes on the world, and early chapter access — delivered to your inbox.
           </p>
 
-          <!-- MAILERLITE FORM EMBED GOES HERE -->
-          <div class="newsletter-form-placeholder">
-            <p>MailerLite signup form will appear here.</p>
-            <p style="margin-top: var(--space-2); font-size: var(--text-xs); color: var(--color-text-faint);">Replace this placeholder with your MailerLite embed code.</p>
-          </div>
-          <!-- END MAILERLITE FORM EMBED -->
+          <a href="https://preview.mailerlite.io/forms/2233008/183400961195115545/share" target="_blank" rel="noopener noreferrer" class="newsletter-cta" aria-label="Join the newsletter">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Join the Newsletter
+          </a>
 
         </div>
       </div>
